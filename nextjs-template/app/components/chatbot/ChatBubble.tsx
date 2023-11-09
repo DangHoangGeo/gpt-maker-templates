@@ -15,7 +15,7 @@ const ChatBubble: React.FC<ChatBubbleProps> = ({ message, isUser }) => {
 
   return (
 	<div className="flex">
-		{!isUser&&<Avatar alt="User" src="5.png" size={8} />}
+		{!isUser&&<Avatar alt="User" src="Jchatly.png" size={8} />}
 		<div
 			className={`max-w-xs md:max-w-md px-4 py-2 rounded-lg m-2 ${bubbleStyles}`}
 			style={{ alignSelf: isUser ? 'flex-end' : 'flex-start' }}
