@@ -14,8 +14,11 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       colors: {
-        indigo: '#4B0082',
-        cherryBlossom: '#FFC0CB',
+        indigo: '#7143F7',
+        cherryBlossom: '#EB4DA8',
+        lightPink: '#F7E4F9',
+        darkBlue: '#063971',
+        darkGreen: '#006B70',
         jade: '#00A36C',
         charcoal: '#36454F',
         lightGrey: '#F5F5F5',
