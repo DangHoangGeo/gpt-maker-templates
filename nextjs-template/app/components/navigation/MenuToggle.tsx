@@ -16,7 +16,7 @@ type MenuToggleProps = {
 };
 
 export const MenuToggle = ({ toggle }: MenuToggleProps) => (
-	<button onClick={toggle}>
+	<button className="my-button" onClick={toggle}>
 		<svg width="23" height="23" viewBox="0 0 23 23">
 			<Path
 				variants={{

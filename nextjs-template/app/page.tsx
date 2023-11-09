@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import Alert from './components/feedback/Alert';
-import HomePage from './components/pages/Motion';
+import HomePage from './components/pages/Home';
 import AppBar from './components/navigation/AppBar';
 import Footer from './components/navigation/Footer';
 
