@@ -24,7 +24,7 @@ export const Navigation = ({isOpen}:NavigationProps) => (
 );
 
 const itemIds = [
-  {index: 0, icon:'', text:'Learning', href:'/learning'},
+  {index: 0, icon:'', text:'Learning', href:'/test-components'},
   {index: 1, icon:'', text:'Discovery', href:'/discovery'},
   {index: 2, icon:'', text:'Practice', href:'/practice'},
   {index: 3, icon:'', text:'Dashboard', href:'/dashboard'},

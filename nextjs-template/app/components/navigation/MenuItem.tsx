@@ -1,5 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
+import Link  from "next/link";
 
 const variants = {
   open: {
@@ -21,12 +22,13 @@ const variants = {
 const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
 type MenuItemProps = {
-  menuItem: {index: number, icon?: string, text?: string};
+  menuItem: {index: number, icon?: string, text?: string, href: string};
 };
 
 export const MenuItem = ({ menuItem }: MenuItemProps) => {
 	const style = { border: `2px solid ${colors[menuItem.index]}` };
 	return (
+    <Link href={menuItem.href}>
 		<motion.li
 			variants={variants}
 			whileHover={{ scale: 1.1 }}
@@ -40,5 +42,6 @@ export const MenuItem = ({ menuItem }: MenuItemProps) => {
         {menuItem?.text}
       </div>
 		</motion.li>
+    </Link>
 	);
 };

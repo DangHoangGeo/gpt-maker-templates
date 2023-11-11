@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className="container flex flex-col items-center mx-auto p-4">
-      <ChatBot /* Props as needed */ />
+      
     </div>
   );
 };
