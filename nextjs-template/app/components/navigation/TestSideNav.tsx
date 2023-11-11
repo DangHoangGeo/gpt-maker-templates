@@ -15,7 +15,7 @@ const sidebar = {
     }
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(26px at 40px 40px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -36,9 +36,10 @@ export const SideBar = () => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
+      className={isOpen? "w-80" : "w-0"}
     >
       <motion.div className="background" variants={sidebar} />
-      <Navigation />
+      <Navigation isOpen={isOpen} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

@@ -22,21 +22,24 @@ const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage }) => {
   };
 
   return (
-    <div className="flex items-center justify-between w-full p-3 border-t border-gray-200">
-      <input
-        type="text"
-        placeholder="Type a message..."
-        className="flex-1 px-4 py-2 rounded-md bg-gray-200 border-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        onKeyPress={handleKeyPress}
-      />
-      <button
-        onClick={handleSend}
-        className="ml-4 bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-      >
-        Send
-      </button>
+    <div className='items-center justify-between w-full p-3 border-t border-gray-200'>
+      <div className='flex bg-gray-100 border w-full border-gray-400 p-2 rounded-xl focus:ring-2 focus:ring-gray-400'>
+        <input
+          type="text"
+          placeholder="Send a request..."
+          className="bg-gray-100 text-sm w-full p-1 focus:outline-none rounded-md text-gray-900 "
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          onKeyPress={handleKeyPress}
+        />
+        <button
+          onClick={handleSend}
+          className="ml-4 bg-gray-800 text-white rounded-md px-2 py-2 hover:bg-jade focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-opacity-50"
+        >
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.14645 2.14645C7.34171 1.95118 7.65829 1.95118 7.85355 2.14645L11.8536 6.14645C12.0488 6.34171 12.0488 6.65829 11.8536 6.85355C11.6583 7.04882 11.3417 7.04882 11.1464 6.85355L8 3.70711L8 12.5C8 12.7761 7.77614 13 7.5 13C7.22386 13 7 12.7761 7 12.5L7 3.70711L3.85355 6.85355C3.65829 7.04882 3.34171 7.04882 3.14645 6.85355C2.95118 6.65829 2.95118 6.34171 3.14645 6.14645L7.14645 2.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+        </button>
+      </div>
+      
     </div>
   );
 };

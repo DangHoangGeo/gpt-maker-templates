@@ -11,12 +11,24 @@ const variants = {
   }
 };
 
-export const Navigation = () => (
-  <motion.ul variants={variants}>
-    {itemIds.map(i => (
-      <MenuItem i={i} key={i} />
+type NavigationProps = {
+  isOpen: boolean;
+};
+
+export const Navigation = ({isOpen}:NavigationProps) => (
+  <motion.ul variants={variants} className={isOpen ? "my-ul":"hidden"}>
+    {itemIds.map(item => (
+      <MenuItem menuItem={item} key={item.index} />
     ))}
   </motion.ul>
 );
 
-const itemIds = [0, 1, 2, 3, 4];
+const itemIds = [
+  {index: 0, icon:'', text:'Learning', href:'/learning'},
+  {index: 1, icon:'', text:'Discovery', href:'/discovery'},
+  {index: 2, icon:'', text:'Practice', href:'/practice'},
+  {index: 3, icon:'', text:'Dashboard', href:'/dashboard'},
+  {index: 4, icon:'', text:'Settings', href:'/settings'},
+  {index: 5, icon:'', text:'Profile', href:'/profile'},
+  {index: 6, icon:'', text:'Logout', href:'/logout'},
+];

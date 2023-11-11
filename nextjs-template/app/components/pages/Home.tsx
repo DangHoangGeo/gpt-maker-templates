@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ChatBot from '../chatbot/ChatbBot';
+import ChatBot from '../chatbot/ChatInterface';
 import ChatActionButton from '../chatbot/ChatActionButton';
 import { motion } from 'framer-motion';
 
@@ -25,7 +25,7 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container flex flex-col items-center mx-auto p-4">
       <ChatBot /* Props as needed */ />
     </div>
   );

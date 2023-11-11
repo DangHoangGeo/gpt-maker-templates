@@ -21,19 +21,24 @@ const variants = {
 const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
 
 type MenuItemProps = {
-	i: number;
+  menuItem: {index: number, icon?: string, text?: string};
 };
 
-export const MenuItem = ({ i }: MenuItemProps) => {
-	const style = { border: `2px solid ${colors[i]}` };
+export const MenuItem = ({ menuItem }: MenuItemProps) => {
+	const style = { border: `2px solid ${colors[menuItem.index]}` };
 	return (
 		<motion.li
 			variants={variants}
 			whileHover={{ scale: 1.1 }}
 			whileTap={{ scale: 0.95 }}
+      className="my-li"
 		>
-			<div className="icon-placeholder" style={style} />
-			<div className="text-placeholder" style={style} />
+			<div className="w-12 h-12 rounded-full mr-4" style={style} >
+        {menuItem?.icon}
+      </div>
+			<div className="border w-28 rounded-lg text-gray-950 p-2" style={style} >
+        {menuItem?.text}
+      </div>
 		</motion.li>
 	);
 };
