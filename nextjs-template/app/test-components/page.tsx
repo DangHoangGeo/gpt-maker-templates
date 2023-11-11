@@ -89,8 +89,6 @@ export default function Home() {
         </div>
       </div>
 
-      <ChatInterface />
-
       <Textarea
         id="user-bio"
         label="Bio"
