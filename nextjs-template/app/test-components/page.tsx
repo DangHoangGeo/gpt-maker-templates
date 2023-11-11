@@ -14,7 +14,7 @@ import DatePickerComponent from '../components/form/DatePickerComponent';
 import Alert from '../components/feedback/Alert';
 import LoadingSpinner from '../components/feedback/LoadingSpinner';
 import Snackbar from '../components/feedback/Snackbar';
-import ChatInterface from '../components/chatbot/ChatbBot';
+import ChatInterface from '../components/chatbot/ChatInterface';
 import HomePage from '../components/pages/Motion';
 
 export default function Home() {

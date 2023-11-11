@@ -27,7 +27,7 @@ body {
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
@@ -36,11 +36,10 @@ body {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 300px;
 }
 
 .my-button {
@@ -50,29 +49,27 @@ nav {
   -moz-user-select: none;
   -ms-user-select: none;
   cursor: pointer;
-  position: absolute;
+  position: fixed;
   top: 20px;
   left: 28px;
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: transparent;
 }
 
-ul,
-li {
+.my-ul {
   margin: 0;
   padding: 0;
-}
-
-ul {
   padding: 25px;
-  position: absolute;
-  top: 100px;
-  width: 230px;
+  position: fixed;
+  top: 60px;
+  width: 280px;
 }
 
-li {
+.my-li {
+  margin: 0;
+  padding: 0;
   list-style: none;
   margin-bottom: 20px;
   display: flex;
@@ -80,24 +77,9 @@ li {
   cursor: pointer;
 }
 
-.icon-placeholder {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  flex: 40px 0;
-  margin-right: 20px;
-}
-
-.text-placeholder {
-  border-radius: 5px;
-  width: 200px;
-  height: 20px;
-  flex: 1;
-}
-
 .refresh {
   padding: 10px;
-  position: absolute;
+  position: fixed;
   background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   width: 20px;
