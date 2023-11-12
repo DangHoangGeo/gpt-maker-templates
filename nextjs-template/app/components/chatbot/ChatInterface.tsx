@@ -63,17 +63,17 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({messages, is_demo=false}) 
 	// Handle user request
 	const handleUserRequest = (message: string) => {
 		// check if message is blank
-		console.log(local_messages)
 		if (!message || /^\s*$/.test(message)){
 			const new_ai_message: Message = {text: 'Please, tell me how can I help you!', type: 'ai', chat_type: 'greeting'};
 			setLocalMessages([...local_messages, new_ai_message]);
 		}else{
 			// Logic to handle the user request message
+			const lowerCasemessage = message.toLowerCase();
 			const new_message: Message = {text: message, type: 'user'};
 			setLocalMessages(prevMessages => [...prevMessages, new_message]);
 			setIsStartChatting(true);
-			if(message=='hi'||message=='hello'||message=='hey'){
-				const new_ai_message: Message = {text: 'Hi, how can I help you?', type: 'ai', chat_type: 'greeting'};
+			if(lowerCasemessage === 'hi'||lowerCasemessage==='hello'||lowerCasemessage==='hey'){
+				const new_ai_message: Message = {text: `${message.toUpperCase()}, how can I help you?`, type: 'ai', chat_type: 'greeting'};
 				setLocalMessages(prevMessages => [...prevMessages, new_ai_message]);
 			}else{
 				getAIResponse(message);

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import FeaturesSection from './components/sections/Features';
 import { SideBar } from './components/navigation/TestSideNav';
 import Hero from './components/sections/Hero';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -29,17 +30,18 @@ export default function Home() {
       )}
       <SideBar/>
       <Hero/>
-      <section className="container bg-gradient-to-r from-jade to-darkGreen text-white my-4 rounded-lg shadow-lg py-12 px-4 md:px-8">
+      <section className="container bg-gradient-to-r from-jade to-darkGreen text-white my-4 rounded-lg shadow-lg py-8 px-4 md:py-12 md:px-8">
         <div className="container mx-auto flex flex-col items-center">
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           ></motion.div>
-          <h2 className="text-2xl md:text-4xl font-bold mb-4">What We Offer</h2>
+          <Link href="/"><img src={'/book-learning-japanese.png'} alt={'LangLift'} className="object-cover rounded-full w-24 h-24" /></Link>
+          <h2 className="text-2xl md:text-4xl font-bold my-2 md:my-4">What We Offer</h2>
           <div className="flex flex-col items-center">
-            <p className="text-lg mb-8">Our system provides an immersive language learning experience through:</p>
-            <ul className="pl-8 list-disc">
+            <p className="text-md md:text-lg text-center mb-4 md:mb-8">Our system provides an immersive language learning experience through:</p>
+            <ul className="pl-8 text-sm md:text-md list-disc">
               <li className="mb-2">Interactive AI-driven conversations</li>
               <li className="mb-2">Personalized learning paths</li>
               <li className="mb-2">Comprehensive modules covering vocabulary, grammar, and more</li>
