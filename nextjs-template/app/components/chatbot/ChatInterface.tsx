@@ -72,7 +72,12 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({messages, is_demo=false}) 
 			const new_message: Message = {text: message, type: 'user'};
 			setLocalMessages(prevMessages => [...prevMessages, new_message]);
 			setIsStartChatting(true);
-			getAIResponse(message);
+			if(message=='hi'||message=='hello'||message=='hey'){
+				const new_ai_message: Message = {text: 'Hi, how can I help you?', type: 'ai', chat_type: 'greeting'};
+				setLocalMessages(prevMessages => [...prevMessages, new_ai_message]);
+			}else{
+				getAIResponse(message);
+			}
 		}
 	};
 

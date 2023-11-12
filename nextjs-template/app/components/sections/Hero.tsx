@@ -30,7 +30,7 @@ export default function Hero() {
 			>
 		    <Link href="/"><img src={'/Jchatly.png'} alt={'LangLift'} className="object-cover rounded-full m-4 w-24 h-24" /></Link>
 			<h1 className="text-2xl md:text-4xl text-center font-bold mb-4">Hello and Welcome to LangLift!</h1>
-			<p className="text-lg mb-8 text-center max-w-xl"><TypingEffect typingSpeed={20} message={"I'm here to help you embark on your language learning journey."} /></p>
+			<p className="text-md md:text-lg mb-8 text-center max-w-xl">{"Learn Languages with AI-assistant | Interactive, Personalized Language Learning"}</p>
 			<div className="border border-gray-300 rounded-lg md:p-2 shadow-md m-2">
 				<ChatInterface messages={messages} />
 			</div>
