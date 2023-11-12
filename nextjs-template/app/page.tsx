@@ -2,29 +2,14 @@
 import React from 'react';
 import Alert from './components/feedback/Alert';
 import Footer from './components/navigation/Footer';
-import ChatInterface from './components/chatbot/ChatInterface';
 import { motion } from 'framer-motion';
 import FeaturesSection from './components/sections/Features';
-import {Message} from './components/chatbot/ChatBubble';
 import { SideBar } from './components/navigation/TestSideNav';
 import Hero from './components/sections/Hero';
 
 export default function Home() {
 
   const [alert, setAlert] = React.useState({ show: false, type: '', message: '' });
-  const [chatOptions, setChatOptions] = React.useState([
-    { label: 'Start a Lesson', value: 'start_lesson' },
-    { label: 'Review Past Lessons', value: 'review_lessons' },
-    { label: 'Explore Culture', value: 'explore_culture' },
-  ]);
-
-  // An array of messages, with each message having text and a flag indicating if it's from the user
-  const messages: [Message] = [
-	  { text: 'Hello, how can I help you?', type: 'ai' },
-	  //{ text: 'I want to learn Japanese.', isUser: true },
-	  // ... other messages
-	];
-
   const showAlert = (type: 'error' | 'success' | 'warning' | 'info', message: string) => {
     setAlert({ show: true, type, message });
   };
@@ -32,21 +17,6 @@ export default function Home() {
   const closeAlert = () => {
     setAlert({ ...alert, show: false });
   };
-
-  React.useEffect(() => {
-    // This would be replaced with your chatbot logic to send a welcome message
-    sendWelcomeMessage();
-  }, []);
-
-  const sendWelcomeMessage = () => {
-    // Logic to send message via chatbot
-  };
-
-  const handleQuickResponse = (value: string) => {
-    // Logic to handle quick response, e.g., navigate to a lesson or cultural exploration
-    console.log(value);
-  };
-
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-2 md:p-8">

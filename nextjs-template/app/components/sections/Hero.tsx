@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import {Message} from '../chatbot/ChatBubble';
 import ChatInterface from '../chatbot/ChatInterface';
 import Link from 'next/link';
+import TypingEffect from '../chatbot/TypingEffect';
 
 export default function Hero() {
 	const [chatOptions, setChatOptions] = React.useState([
@@ -14,7 +15,7 @@ export default function Hero() {
 	
 	  // An array of messages, with each message having text and a flag indicating if it's from the user
 	  const messages: [Message] = [
-		  { text: 'Hello, how can I help you?', type: 'ai' },
+		  { text: 'Are you starting from scratch or looking to improve your existing skills?', type: 'ai', chat_type:'greeting'},
 		  //{ text: 'I want to learn Japanese.', isUser: true },
 		  // ... other messages
 		];
@@ -28,8 +29,8 @@ export default function Hero() {
 			className="flex flex-col mx-auto items-center"
 			>
 		    <Link href="/"><img src={'/Jchatly.png'} alt={'LangLift'} className="object-cover rounded-full m-4 w-24 h-24" /></Link>
-			<h1 className="text-2xl md:text-4xl font-bold mb-4">Welcome to LangLift</h1>
-			<p className="text-lg mb-8">Explore a new way of learning languages, powered by AI.</p>
+			<h1 className="text-2xl md:text-4xl text-center font-bold mb-4">Hello and Welcome to LangLift!</h1>
+			<p className="text-lg mb-8 text-center max-w-xl"><TypingEffect typingSpeed={20} message={"I'm here to help you embark on your language learning journey."} /></p>
 			<div className="border border-gray-300 rounded-lg md:p-2 shadow-md m-2">
 				<ChatInterface messages={messages} />
 			</div>
