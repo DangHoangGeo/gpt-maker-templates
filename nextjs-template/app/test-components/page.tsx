@@ -16,6 +16,7 @@ import LoadingSpinner from '../components/feedback/LoadingSpinner';
 import Snackbar from '../components/feedback/Snackbar';
 import ChatInterface from '../components/chatbot/ChatInterface';
 import HomePage from '../components/pages/Motion';
+import QuestionCard from '../components/display/QuestionCard';
 
 export default function Home() {
   
@@ -54,6 +55,19 @@ export default function Home() {
     showAlert('success', 'You clicked the primary action button!');
   }
 
+  const question = "Complete the following sentence:";
+  const options = [
+    { id: 'edge-network', label: 'Edge Network' },
+    { id: 'cdn', label: 'Content Delivery Network' },
+    { id: 'cms', label: 'Content Management System' },
+    { id: 'vm-network', label: 'Virtual Machine Network' },
+  ];
+
+  const handleAnswerSelection = (selectedId: string) => {
+    console.log(`Selected option ID: ${selectedId}`);
+    // Logic to handle answer selection
+  };
+  
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-2 md:p-24">
       {alert.show && (
@@ -88,6 +102,12 @@ export default function Home() {
           </a>
         </div>
       </div>
+
+      <QuestionCard
+        question={question}
+        options={options}
+        onAnswer={handleAnswerSelection}
+      />
 
       <Textarea
         id="user-bio"

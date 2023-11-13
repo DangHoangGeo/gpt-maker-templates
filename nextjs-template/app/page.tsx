@@ -7,6 +7,9 @@ import FeaturesSection from './components/sections/Features';
 import { SideBar } from './components/navigation/TestSideNav';
 import Hero from './components/sections/Hero';
 import Link from 'next/link';
+import QuestionCard from './components/display/QuestionCard';
+import SkillsSection from './components/sections/SkillsSection';
+import LearningPath from './components/sections/LearningPath';
 
 export default function Home() {
 
@@ -52,6 +55,25 @@ export default function Home() {
         <FeaturesSection />
 
       </section>
+
+      <LearningPath/>
+      
+      <SkillsSection />
+      
+      <div className="bg-gray-100 container p-10 md:my-8 my-4 rounded-lg shadow-lg">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6">Built for Everyone</h2>
+          <p className="mb-4">{"Helping you measure and develop the skills that matter most to your organization's success through ongoing strategic partnership."}</p>
+          <p>Highly configurable and enterprise-ready, the LangLift is optimized to help you meet your specific business goals.</p>
+          {/* Learn More Link */}
+          <a href="/learn-more" className="text-indigo-600 hover:text-indigo-500">Learn more →</a>
+          {/* Testimonial */}
+          <blockquote className="p-4 italic border-l-4 bg-neutral-100 text-neutral-600 border-neutral-500 quote">
+            <p className="mb-2">{"\"Partnering with LangLift was easy. They made our tool implementation seamless, including kickoff communications and tools. They were hands-on at every turn!\""}</p>
+            <cite>- Global IT Program Delivery Senior Manager</cite>
+          </blockquote>
+        </div>
+      </div>
       <Footer />
     </main>
   )
