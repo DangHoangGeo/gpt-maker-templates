@@ -15,7 +15,7 @@ const LearningPath: React.FC = () => {
   return (
     <div className="my-4 container bg-slate-100 p-12">
       <h2 className="text-3xl font-bold text-center mb-6 bg-jade p-4 rounded-lg text-gray-100">Learning Path</h2>
-      <div className="flex justify-center space-x-2 items-center">
+      <div className="flex flex-col md:flex-row justify-center space-x-2 items-center">
         {weeks.map((week, index) => (
           <React.Fragment key={week.weekNumber}>
             <WeekCard {...week} />

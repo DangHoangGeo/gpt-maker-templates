@@ -13,7 +13,7 @@ const LearningPlanProgress: React.FC<LearningPlanProgressProps> = ({ currentWeek
   const progressPercentage = Math.min(100, (currentScore / targetScore) * 100);
 
   return (
-    <div className="bg-white shadow rounded-lg p-4 my-4">
+    <div className="bg-white dark:bg-slate-800 shadow rounded-lg p-4 my-4">
       <h3 className="text-lg font-semibold mb-3">Learning Plan Progress</h3>
       <div className="flex items-center justify-between mb-2">
         {Array.from({ length: totalWeeks }).map((_, index) => (

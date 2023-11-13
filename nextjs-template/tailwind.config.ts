@@ -12,7 +12,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-         'skill-section': 'url("/skill-development-creative.png")',
+         'skill-section': 'url("/back-ground-creative.png")',
       },
       colors: {
         indigo: '#7143F7',

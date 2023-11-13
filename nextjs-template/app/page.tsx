@@ -60,7 +60,7 @@ export default function Home() {
       
       <SkillsSection />
       
-      <div className="bg-gray-100 container p-10 md:my-8 my-4 rounded-lg shadow-lg">
+      <div className="bg-gray-100 dark:bg-slate-800 container p-10 md:my-8 my-4 rounded-lg shadow-lg">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-6">Built for Everyone</h2>
           <p className="mb-4">{"Helping you measure and develop the skills that matter most to your organization's success through ongoing strategic partnership."}</p>
